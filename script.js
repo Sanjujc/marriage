@@ -125,20 +125,46 @@ mutationObserver.observe(document.body, { childList: true, subtree: true });
 const audioToggle = document.getElementById('audioToggle');
 const bgMusic = document.getElementById('bgMusic');
 let isPlaying = false;
+let isMuted = true;
 
 const playIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>`;
 const pauseIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>`;
 
+// Unmute and fade in on first user interaction
+const unmuteOnInteraction = () => {
+    if (!bgMusic) return;
+    bgMusic.muted = false;
+    bgMusic.volume = 0;
+    isPlaying = true;
+    isMuted = false;
+    if (audioToggle) audioToggle.innerHTML = pauseIcon;
+    let vol = 0;
+    const fadeIn = setInterval(() => {
+        vol = Math.min(vol + 0.02, 0.35);
+        bgMusic.volume = vol;
+        if (vol >= 0.35) clearInterval(fadeIn);
+    }, 100);
+    document.removeEventListener('click', unmuteOnInteraction);
+    document.removeEventListener('touchstart', unmuteOnInteraction);
+};
+document.addEventListener('click', unmuteOnInteraction);
+document.addEventListener('touchstart', unmuteOnInteraction);
+
+// Manual toggle
 if (audioToggle) {
     audioToggle.addEventListener('click', () => {
-        if (isPlaying) {
+        if (isMuted) {
+            // First click unmutes
+            unmuteOnInteraction();
+        } else if (isPlaying) {
             bgMusic.pause();
             audioToggle.innerHTML = playIcon;
+            isPlaying = false;
         } else {
             bgMusic.play();
             audioToggle.innerHTML = pauseIcon;
+            isPlaying = true;
         }
-        isPlaying = !isPlaying;
     });
 }
 // Force visibility on hero immediately as fallback
