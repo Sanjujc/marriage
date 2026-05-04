@@ -145,3 +145,80 @@ if (audioToggle) {
 setTimeout(() => {
     document.querySelectorAll('.hero .fade-up').forEach(el => el.classList.add('visible'));
 }, 500);
+
+// --- Cinematic Bokeh Engine ---
+const canvas = document.getElementById('bokehCanvas');
+if (canvas) {
+    const ctx = canvas.getContext('2d');
+    let width, height;
+    let particles = [];
+
+    const resize = () => {
+        width = window.innerWidth;
+        height = window.innerHeight;
+        canvas.width = width;
+        canvas.height = height;
+    };
+    window.addEventListener('resize', resize);
+    resize();
+
+    class Particle {
+        constructor() {
+            this.x = Math.random() * width;
+            this.y = Math.random() * height;
+            // Generate a 'Z-depth' to simulate a thick 3D space
+            this.depth = Math.random(); 
+            
+            // Render massive blurry orbs in foreground, tiny sharp specks in background
+            this.size = this.depth * 5 + 0.5; 
+            this.speedY = (Math.random() * 0.6 + 0.2) + (this.depth * 0.8);
+            this.speedX = (Math.random() - 0.5) * 0.4;
+            
+            this.baseOpacity = this.depth * 0.5 + 0.1;
+            this.opacity = this.baseOpacity;
+            this.pulseParams = Math.random() * 0.04;
+        }
+        update() {
+            this.y -= this.speedY;
+            this.x += this.speedX;
+            
+            // Intense throbbing pulse 
+            this.opacity = this.baseOpacity + Math.sin(Date.now() * this.pulseParams) * 0.2;
+            
+            // Mouse repulsion
+            if (!isTouchDevice) {
+                const dx = state.mouse.x - this.x;
+                const dy = state.mouse.y - this.y;
+                const dist = Math.sqrt(dx*dx + dy*dy);
+                // Closer particles react more violently
+                if (dist < 150) {
+                    this.x -= (dx/dist) * (this.depth * 3 + 1);
+                    this.y -= (dy/dist) * (this.depth * 3 + 1);
+                }
+            }
+
+            if (this.y < -30) {
+                this.y = height + 30;
+                this.x = Math.random() * width;
+            }
+        }
+        draw() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(216, 159, 122, ${Math.max(0, Math.min(this.opacity, 0.9))})`;
+            ctx.shadowBlur = this.size * 3;
+            ctx.shadowColor = 'rgba(216, 159, 122, 0.9)';
+            ctx.fill();
+        }
+    }
+
+    // Spawn 200 layered ambient embers
+    for (let i = 0; i < 200; i++) particles.push(new Particle());
+
+    const animateParticles = () => {
+        ctx.clearRect(0, 0, width, height);
+        particles.forEach(p => { p.update(); p.draw(); });
+        requestAnimationFrame(animateParticles);
+    };
+    animateParticles();
+}
