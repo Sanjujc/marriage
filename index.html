@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanju & Surya | Wedding Invitation</title>
+    <!-- SEO and Social Sharing Tags -->
+    <meta property="og:title" content="Sanju & Surya | Wedding Invitation">
+    <meta property="og:description" content="Together with our families, we joyfully invite you to share our happiness as we celebrate our wedding. Please join us for the celebrations.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1544078755-9afae5ed92af?auto=format&fit=crop&q=80&w=1200">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Soft Glow Custom Cursor -->
+    <div class="cursor-trail"></div>
+    <div class="cursor-dot"></div>
+
+    <!-- Soft Blurred Ambient Background -->
+    <div class="ambient-bg"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-logo fade-up">S &amp; S</div>
+        <ul class="nav-links fade-up">
+            <li><a href="#hero" class="magnetic-item">Home</a></li>
+            <li><a href="#events" class="magnetic-item">Events</a></li>
+            <li><a href="#gallery" class="magnetic-item">Gallery</a></li>
+        </ul>
+        <div class="audio-control magnetic-item fade-up" id="audioToggle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        </div>
+        <audio id="bgMusic" loop>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-15.mp3" type="audio/mpeg">
+        </audio>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-names fade-up">Sanju Jayachandran<br><span style="font-size: 0.5em; font-style: italic; color: var(--accent-color);">&amp;</span><br>Surya Suresh</h1>
+            <p class="hero-tagline fade-up delay-long">Two Souls, One Journey</p>
+            <div class="scroll-indicator fade-up delay-long">
+                <span>Scroll</span>
+                <div class="line"></div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Formal Invitation Letter -->
+    <section class="fade-up" style="text-align: center; max-width: 800px; margin: -3rem auto 0 auto; padding-bottom: 5rem; position: relative; z-index: 10;">
+        <h2 style="font-family: var(--font-heading); font-size: 3.5rem; color: var(--accent-color); font-style: italic; margin-bottom: 1.5rem; font-weight: 400; opacity: 0.9;">You Are Invited</h2>
+        <p style="font-size: 1.1rem; line-height: 2.2; color: var(--text-color); letter-spacing: 1px; font-weight: 300;">
+            Together with our families, we request the honor of your presence and blessings<br>as we embark on this beautiful journey of love and togetherness.<br><br>Your presence will make our celebration complete.
+        </p>
+    </section>
+
+    <!-- ======================================================= -->
+    <script src="components/countdown.js" defer></script>
+    <countdown-timer target-date="2026-09-13T17:00:00"></countdown-timer>
+    <!-- ======================================================= -->
+
+    <!-- Events Section -->
+    <section id="events" class="events section-padding">
+        <div class="container">
+            <h2 class="section-title fade-up">The Details</h2>
+            <div class="events-grid">
+                <!-- Reception Card -->
+                <div class="event-card fade-up">
+                    <span class="event-type">Reception</span>
+                    <h3 class="event-date">14 August</h3>
+                    <p class="event-time">Evening Celebration</p>
+                    <a href="#" class="btn-outline magnetic-item">Save the Date</a>
+                </div>
+                <!-- Wedding Card -->
+                <div class="event-card fade-up" style="transition-delay: 0.2s">
+                    <span class="event-type">Wedding</span>
+                    <h3 class="event-date">13 September</h3>
+                    <p class="event-time">Auspicious Ceremony</p>
+                    <a href="#" class="btn-outline magnetic-item">Save the Date</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================= -->
+    <script src="components/rsvp.js" defer></script>
+    <rsvp-form></rsvp-form>
+    <!-- ======================================================= -->
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery section-padding">
+        <div class="container">
+            <h2 class="section-title fade-up">Moments</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item glass fade-up"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=600" alt="Gallery"></div>
+                <div class="gallery-item glass fade-up" style="transition-delay: 0.2s"><img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&q=80&w=600" alt="Gallery"></div>
+                <div class="gallery-item glass fade-up" style="transition-delay: 0.4s"><img src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?auto=format&fit=crop&q=80&w=600" alt="Gallery"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p class="fade-up">Cinematic. Luxurious. Emotional.</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
