@@ -44,7 +44,12 @@ body { font-family: var(--font-body); background-color: var(--bg-color); color: 
 
 .navbar { position: fixed; top: 0; width: 100%; padding: 2rem 4rem; display: flex; justify-content: space-between; align-items: center; z-index: 100; transition: padding 0.4s ease, background 0.4s ease; }
 .navbar.scrolled { padding: 1rem 4rem; background: rgba(11, 18, 16, 0.8); backdrop-filter: blur(12px); border-bottom: 1px solid var(--glass-border); }
-.nav-logo { font-family: var(--font-heading); font-size: 1.8rem; font-weight: 400; letter-spacing: 2px; }
+.nav-logo { display: flex; align-items: center; gap: 0.75rem; cursor: default; }
+.nav-logo svg { transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1); }
+.nav-logo:hover svg { transform: rotate(15deg) scale(1.05); }
+.nav-logo-text { display: flex; flex-direction: column; line-height: 1.2; }
+.nav-logo-names { font-family: var(--font-heading); font-size: 1rem; font-weight: 400; letter-spacing: 1px; color: var(--text-color); }
+.nav-logo-date { font-size: 0.65rem; letter-spacing: 3px; color: var(--accent-color); text-transform: uppercase; font-family: var(--font-body); }
 .nav-links { display: flex; gap: 2.5rem; list-style: none; }
 .nav-links a { text-decoration: none; color: var(--text-color); font-size: 0.85rem; letter-spacing: 3px; text-transform: uppercase; transition: color 0.3s; }
 .nav-links a:hover { color: var(--accent-color); }
