@@ -1,24 +1,10 @@
 [build]
-  # Since this is a pure HTML/JS project with no bundler (like Webpack or React), 
-  # there is no build step needed.
   command = ""
-  
-  # The directory that contains the deploy-ready HTML files.
   publish = "."
 
-# Performance & Caching Rules for Static Assets
 [[headers]]
   for = "/*"
   [headers.values]
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
-
-[[headers]]
-  for = "/*.css"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/*.js"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "no-cache, no-store, must-revalidate"
