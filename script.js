@@ -83,6 +83,18 @@ window.addEventListener('scroll', () => {
             navbar.classList.remove('scrolled');
         }
     }
+    
+    // Fade out the side scroll indicator when scrolling down
+    const scrollIndicator = document.querySelector('.scroll-indicator');
+    if(scrollIndicator) {
+        if (window.scrollY > 150) {
+            scrollIndicator.style.opacity = '0';
+            scrollIndicator.style.pointerEvents = 'none';
+        } else {
+            scrollIndicator.style.opacity = '0.8';
+            scrollIndicator.style.pointerEvents = 'auto';
+        }
+    }
 });
 
 // Staggered intersection observer

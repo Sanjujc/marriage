@@ -74,8 +74,10 @@ body { font-family: var(--font-body); background-color: var(--bg-color); color: 
 @keyframes goldSweep { 0% { background-position: 100% 0; } 100% { background-position: 0 0; } }
 .hero-tagline { font-family: var(--font-heading); font-style: italic; font-size: 1.2rem; letter-spacing: 4px; color: var(--text-muted); margin-top: 1.5rem; }
 .delay-long { transition-delay: 1.5s !important; }
-.scroll-indicator { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 10px; font-size: 0.7rem; letter-spacing: 3px; color: var(--text-muted); text-transform: uppercase; }
-.scroll-indicator .line { width: 1px; height: 50px; background: linear-gradient(to bottom, var(--accent-color) 50%, transparent 50%); background-size: 100% 200%; animation: scrollLine 2.5s infinite ease-in-out; }
+.scroll-indicator { position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 5px; font-size: 0.9rem; letter-spacing: 2px; color: #fff; text-transform: uppercase; z-index: 100; transition: opacity 0.5s ease; opacity: 1; text-shadow: 0 2px 10px rgba(0,0,0,0.8); animation: bounce 2s infinite; }
+.scroll-indicator span { font-weight: 600; font-family: var(--font-body); letter-spacing: 3px; }
+@keyframes bounce { 0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); } 40% { transform: translateY(-15px) translateX(-50%); } 60% { transform: translateY(-7px) translateX(-50%); } }
+.scroll-indicator .arrow { width: 16px; height: 16px; border-right: 3px solid #fff; border-bottom: 3px solid #fff; transform: rotate(45deg); margin-top: 5px; box-shadow: 2px 2px 5px rgba(0,0,0,0.5); }
 
 /* Invitation Block */
 .invitation-block { text-align: center; max-width: 800px; margin: -1rem auto 0 auto; padding: 0 2rem 5rem 2rem; position: relative; z-index: 10; }
