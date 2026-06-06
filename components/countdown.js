@@ -1,6 +1,6 @@
 class CountdownTimer extends HTMLElement {
     connectedCallback() {
-        this.targetDate = new Date(this.getAttribute('target-date') || '2026-09-13T17:00:00').getTime();
+        this.targetDate = new Date(this.getAttribute('target-date') || '2026-09-13T11:00:00').getTime();
         this.innerHTML = `
             <style>
                 .countdown-wrapper { text-align: center; padding: 6rem 2rem; position: relative; z-index: 10; }
@@ -11,7 +11,7 @@ class CountdownTimer extends HTMLElement {
                 @media (max-width: 768px) { .countdown-wrapper { padding: 3rem 1rem; } .countdown-grid { gap: 1rem; flex-wrap: wrap; } .countdown-item { flex: 1 1 40%; } .countdown-number { font-size: 3rem; font-weight: 500; color: #fff; } }
             </style>
             <section class="countdown-wrapper fade-up">
-                <h2 class="section-title" style="margin-bottom: 2rem; font-size: 2rem; font-style: italic;">The Wait is Almost Over</h2>
+                <h2 class="section-title" style="margin-bottom: 2rem; font-size: 2rem; font-style: italic;">Awaiting the Grand Celebration</h2>
                 <div class="countdown-grid">
                     <div class="countdown-item"><div class="countdown-number" id="cd-days">00</div><div class="countdown-label">Days</div></div>
                     <div class="countdown-item"><div class="countdown-number" id="cd-hours">00</div><div class="countdown-label">Hours</div></div>

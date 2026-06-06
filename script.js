@@ -248,3 +248,40 @@ if (canvas) {
     };
     animateParticles();
 }
+
+// --- Smart Calendar Integration ---
+const saveDateBtn = document.getElementById('saveDateBtn');
+if (saveDateBtn) {
+    saveDateBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        const title = "Sanju & Surya - Reception";
+        const location = "RDR Convention Centre, Kochar Road, Edapazhanji, Thiruvananthapuram";
+        const details = "Evening celebration. We can't wait to see you!";
+        
+        // Detect Apple Devices (iOS/Mac) to provide native Calendar/Reminders integration
+        const isAppleDevice = /(Mac|iPhone|iPod|iPad)/i.test(navigator.userAgent);
+        
+        if (isAppleDevice) {
+            // Generate standard .ics file format
+            const icsContent = 
+"BEGIN:VCALENDAR\n" +
+"VERSION:2.0\n" +
+"BEGIN:VEVENT\n" +
+"DTSTART:20260914T113000Z\n" +
+"DTEND:20260914T153000Z\n" +
+"SUMMARY:" + title + "\n" +
+"DESCRIPTION:" + details + "\n" +
+"LOCATION:" + location + "\n" +
+"END:VEVENT\n" +
+"END:VCALENDAR";
+
+            const uri = "data:text/calendar;charset=utf8," + encodeURIComponent(icsContent);
+            window.location.href = uri;
+        } else {
+            // Standard Google Calendar template for Android / Web
+            const googleUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=20260914T113000Z/20260914T153000Z&details=${encodeURIComponent(details)}&location=${encodeURIComponent(location)}`;
+            window.open(googleUrl, '_blank');
+        }
+    });
+}
