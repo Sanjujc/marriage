@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sanju & Surya | Reception Invitation</title>
     <!-- SEO and Social Sharing Tags -->
     <meta property="og:title" content="Sanju & Surya | Reception Invitation">
-    <meta property="og:description" content="Together with our families, we joyfully invite you to share our happiness as we celebrate our wedding. Please join us for the celebrations.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1544078755-9afae5ed92af?auto=format&fit=crop&q=80&w=1200">
+    <meta property="og:description"
+        content="Together with our families, we joyfully invite you to share our happiness as we celebrate our wedding. Please join us for the celebrations.">
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1544078755-9afae5ed92af?auto=format&fit=crop&q=80&w=1200">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <!-- Soft Glow Custom Cursor -->
     <div class="cursor-trail"></div>
@@ -22,20 +28,21 @@
     <!-- Soft Blurred Ambient Background -->
     <div class="ambient-bg"></div>
     <!-- Magical Copper Particle Engine -->
-    <canvas id="bokehCanvas" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none;"></canvas>
+    <canvas id="bokehCanvas"
+        style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none;"></canvas>
 
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-logo fade-up">
             <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="27" cy="27" r="26" stroke="rgba(216,159,122,0.5)" stroke-width="1"/>
+                <circle cx="27" cy="27" r="26" stroke="rgba(216,159,122,0.5)" stroke-width="1" />
                 <text x="50%" y="56%" dominant-baseline="middle" text-anchor="middle"
                     font-family="Playfair Display, serif" font-size="22" font-style="italic"
                     fill="#e5bd9c">S&amp;S</text>
             </svg>
             <div class="nav-logo-text">
                 <span class="nav-logo-names">Sanju &amp; Surya</span>
-                <span class="nav-logo-date">13.09.2026</span>
+                <span class="nav-logo-date">14.09.2026</span>
             </div>
         </div>
         <ul class="nav-links fade-up">
@@ -43,61 +50,98 @@
             <li><a href="#events" class="magnetic-item">The Events</a></li>
         </ul>
         <div class="audio-control magnetic-item fade-up" id="audioToggle">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path
+                    d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z">
+                </path>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
         </div>
         <audio id="bgMusic" loop preload="auto" muted autoplay>
-            <source src="audio/Jashn%20E%20Bahaaraa%20Instrumental%20Flute%20Jodhaa%20Akbar%20320%20Kbps.mp3" type="audio/mpeg">
+            <source src="audio/Jashn%20E%20Bahaaraa%20Instrumental%20Flute%20Jodhaa%20Akbar%20320%20Kbps.mp3"
+                type="audio/mpeg">
         </audio>
     </nav>
 
     <!-- Hero Section -->
     <section id="hero" class="hero">
         <div class="hero-content">
-            <h1 class="hero-names fade-up">Sanju Jayachandran<br><span style="font-size: 0.5em; font-style: italic; color: var(--accent-color);">&amp;</span><br>Surya Suresh</h1>
+            <h1 class="hero-names fade-up">Sanju Jayachandran<br><span
+                    style="font-size: 0.5em; font-style: italic; color: var(--accent-color);">&amp;</span><br>Surya
+                Suresh</h1>
             <p class="hero-tagline fade-up delay-long">Two Souls, One Journey</p>
             <div class="scroll-indicator">
                 <div class="arrows">
-                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
-                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" style="margin-top: -20px;"><polyline points="18 15 12 9 6 15"></polyline></svg>
+                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5">
+                        <polyline points="18 15 12 9 6 15"></polyline>
+                    </svg>
+                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"
+                        style="margin-top: -20px;">
+                        <polyline points="18 15 12 9 6 15"></polyline>
+                    </svg>
                 </div>
                 <span>Swipe Up</span>
             </div>
         </div>
     </section>
-    
+
     <!-- Formal Invitation Letter -->
-    <section class="invitation-block fade-up" style="background: rgba(11, 18, 16, 0.4); border: 1px solid var(--glass-border); border-radius: 16px; padding: 5rem 3rem; box-shadow: var(--glass-shadow); backdrop-filter: blur(8px); margin-top: 2rem; position: relative;">
+    <section class="invitation-block fade-up"
+        style="background: rgba(11, 18, 16, 0.4); border: 1px solid var(--glass-border); border-radius: 16px; padding: 5rem 3rem; box-shadow: var(--glass-shadow); backdrop-filter: blur(8px); margin-top: 2rem; position: relative;">
         <!-- Decorative corner accents -->
-        <div style="position: absolute; top: 20px; left: 20px; width: 30px; height: 30px; border-top: 1px solid var(--accent-color); border-left: 1px solid var(--accent-color); opacity: 0.5;"></div>
-        <div style="position: absolute; top: 20px; right: 20px; width: 30px; height: 30px; border-top: 1px solid var(--accent-color); border-right: 1px solid var(--accent-color); opacity: 0.5;"></div>
-        <div style="position: absolute; bottom: 20px; left: 20px; width: 30px; height: 30px; border-bottom: 1px solid var(--accent-color); border-left: 1px solid var(--accent-color); opacity: 0.5;"></div>
-        <div style="position: absolute; bottom: 20px; right: 20px; width: 30px; height: 30px; border-bottom: 1px solid var(--accent-color); border-right: 1px solid var(--accent-color); opacity: 0.5;"></div>
+        <div
+            style="position: absolute; top: 20px; left: 20px; width: 30px; height: 30px; border-top: 1px solid var(--accent-color); border-left: 1px solid var(--accent-color); opacity: 0.5;">
+        </div>
+        <div
+            style="position: absolute; top: 20px; right: 20px; width: 30px; height: 30px; border-top: 1px solid var(--accent-color); border-right: 1px solid var(--accent-color); opacity: 0.5;">
+        </div>
+        <div
+            style="position: absolute; bottom: 20px; left: 20px; width: 30px; height: 30px; border-bottom: 1px solid var(--accent-color); border-left: 1px solid var(--accent-color); opacity: 0.5;">
+        </div>
+        <div
+            style="position: absolute; bottom: 20px; right: 20px; width: 30px; height: 30px; border-bottom: 1px solid var(--accent-color); border-right: 1px solid var(--accent-color); opacity: 0.5;">
+        </div>
 
         <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 3rem; gap: 1.5rem;">
-            <div style="width: 80px; height: 1px; background: linear-gradient(90deg, transparent, var(--accent-color)); opacity: 0.6;"></div>
-            <h2 class="invitation-title" style="margin: 0; line-height: 1.2; text-align: center;">You Are Invited<br><span class="invitation-subtitle">for the Wedding Reception</span></h2>
-            <div style="width: 80px; height: 1px; background: linear-gradient(270deg, transparent, var(--accent-color)); opacity: 0.6;"></div>
+            <div
+                style="width: 80px; height: 1px; background: linear-gradient(90deg, transparent, var(--accent-color)); opacity: 0.6;">
+            </div>
+            <h2 class="invitation-title" style="margin: 0; line-height: 1.2; text-align: center;">You Are
+                Invited<br><span class="invitation-subtitle">for the Wedding Reception</span></h2>
+            <div
+                style="width: 80px; height: 1px; background: linear-gradient(270deg, transparent, var(--accent-color)); opacity: 0.6;">
+            </div>
         </div>
-        
+
         <div class="invitation-text" style="font-size: 1rem; line-height: 1.8;">
-            <span style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--accent-color); letter-spacing: 2px;">Anitha V S</span><br>
-            <span style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 3px;">W/o Jayachandran D (Late)</span>
-            
+            <span
+                style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--accent-color); letter-spacing: 2px;">Anitha
+                V S</span><br>
+            <span
+                style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 3px;">W/o
+                Jayachandran D (Late)</span>
+
             <div style="margin: 4rem 0;">
                 <span class="invitation-quote">
-                    "With hearts full of love, we cordially invite you to the Wedding Reception of our beloved son to share in our joy and bless the couple."
+                    "With hearts full of love, we cordially invite you to the Wedding Reception of our beloved son to
+                    share in our joy and bless the couple."
                 </span>
             </div>
 
             <span class="hero-names invitation-names">Sanju Jayachandran</span>
-            <span style="font-family: var(--font-heading); font-style: italic; color: var(--accent-color); font-size: 2rem; display: block; margin: 1.5rem 0;">with</span>
+            <span
+                style="font-family: var(--font-heading); font-style: italic; color: var(--accent-color); font-size: 2rem; display: block; margin: 1.5rem 0;">with</span>
             <span class="hero-names invitation-names">Surya Suresh B</span>
-            
+
             <div style="margin: 4rem 0 3rem 0;">
-                <span style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 3px;">D/o (Late) Suresh C &amp; Smt. Bindhu N K</span>
+                <span
+                    style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 3px;">D/o
+                    (Late) Suresh C &amp; Smt. Bindhu N K</span>
             </div>
 
-            <div style="width: 50px; height: 1px; background: var(--accent-color); margin: 0 auto 2.5rem auto; opacity: 0.4;"></div>
+            <div
+                style="width: 50px; height: 1px; background: var(--accent-color); margin: 0 auto 2.5rem auto; opacity: 0.4;">
+            </div>
 
             <span class="compliments-title">With best compliments from:</span>
             <span class="compliments-names">Danesh, Anju Jayachandran, Bijith, Arathy Raj, Athira Mohan</span>
@@ -115,19 +159,24 @@
                 <div class="event-card fade-up" style="max-width: 650px; width: 100%;">
                     <span class="event-type reception-type">Wedding Reception</span>
                     <h3 class="event-date">14 September</h3>
-                    
-                    <div style="width: 40px; height: 1px; background: var(--accent-color); margin: 0 auto 2rem auto; opacity: 0.5;"></div>
-                    
+
+                    <div
+                        style="width: 40px; height: 1px; background: var(--accent-color); margin: 0 auto 2rem auto; opacity: 0.5;">
+                    </div>
+
                     <p class="event-time reception-time">5:00 pm to 9:00 pm</p>
                     <p class="event-location reception-location">
                         <span style="color: #fff;">RDR Convention Centre</span><br>
                         Kochar Road, Edapazhanji<br>
                         Thiruvananthapuram
                     </p>
-                    
-                    <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-top: 3rem;">
-                        <a id="saveDateBtn" href="javascript:void(0);" class="btn-outline magnetic-item" style="margin-top: 0;">Save the Date</a>
-                        <a target="_blank" href="https://maps.app.goo.gl/cgKcNP51KUhZJVdd8" class="btn-outline magnetic-item" style="margin-top: 0;">Get Directions</a>
+
+                    <div
+                        style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-top: 3rem;">
+                        <a id="saveDateBtn" href="javascript:void(0);" class="btn-outline magnetic-item"
+                            style="margin-top: 0;">Save the Date</a>
+                        <a target="_blank" href="https://maps.app.goo.gl/cgKcNP51KUhZJVdd8"
+                            class="btn-outline magnetic-item" style="margin-top: 0;">Get Directions</a>
                     </div>
                 </div>
             </div>
@@ -142,4 +191,5 @@
 
     <script src="script.js" defer></script>
 </body>
+
 </html>
