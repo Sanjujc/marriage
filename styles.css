@@ -378,9 +378,22 @@ body {
 }
 
 .reception-location {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     color: var(--text-muted);
     line-height: 1.8;
+    letter-spacing: 0.5px;
+}
+
+.venue-name {
+    font-family: 'Cinzel', serif;
+    font-size: 1.85rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 0.8rem;
+    text-shadow: 0 2px 15px rgba(229, 189, 156, 0.15);
 }
 
 .events-grid {
@@ -589,11 +602,19 @@ footer {
     }
 
     .reception-time {
-        font-size: 0.9rem;
+        font-size: 1.35rem;
     }
 
     .reception-location {
-        font-size: 0.85rem;
+        font-size: 1.25rem;
+        line-height: 1.7;
+        letter-spacing: 0.5px;
+    }
+
+    .venue-name {
+        font-size: 1.55rem;
+        letter-spacing: 2px;
+        margin-bottom: 0.6rem;
     }
 
     .section-padding {
